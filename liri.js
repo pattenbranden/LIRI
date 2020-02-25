@@ -26,11 +26,11 @@ function concertThis() {
             // If the axios was successful...
             // Then log the body from the site!
             // console.log(response.data[0]);
-            console.log("---------------------------------");
+            console.log("------------C O N C E R T - T H I S------------");
             console.log("\nName of the Venue: " + response.data[0].venue.name);
             console.log("\nVenue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region)
             console.log("\nDate of the Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY"));
-            console.log("\n---------------------------------");
+            console.log("\n---------------------------------------------");
         });
 };
 function spotifyThis() {
@@ -43,6 +43,7 @@ function spotifyThis() {
             if (err) {
                 return console.log('Error occurred: ' + err);
             }
+            console.log("------------S P O T I F Y - T H I S------------");
             // artist
             console.log("\n Song Artist: " + data.tracks.items[0].artists[0].name)
             // song name
@@ -51,7 +52,7 @@ function spotifyThis() {
             console.log("\n Preview link: \n" + data.tracks.items[0].preview_url)
             // The album that the song is from
             console.log("\n Album: " + data.tracks.items[0].album.name + "\n")
-            console.log("---------------------------------");
+            console.log("-----------------------------------------------");
         });
 };
 function movieThis() {
@@ -66,7 +67,7 @@ function movieThis() {
     })
         .then(function (response) {
             // console.log(response.data)
-            console.log("____________________")
+            console.log("------------M O V I E - T H I S------------")
             console.log("Movie Title: " + response.data.Title)
             console.log("\nRelease year " + (response.data.Year))
             console.log("\nThe movie's rating is: " + response.data.imdbRating);
@@ -75,7 +76,7 @@ function movieThis() {
             console.log("\nLanguages: " + response.data.Language)
             console.log("\nPlot: " + response.data.Plot)
             console.log("\nActors: " + response.data.Actors)
-            console.log("____________________")
+            console.log("-------------------------------------------")
         })
         .catch(function (error) {
             if (error.response) {
